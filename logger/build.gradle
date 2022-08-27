@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    minSdkVersion rootProject.ext.minSdkVersion
+  }
+
+  lintOptions {
+    textReport true
+    textOutput 'stdout'
+  }
+
+  testOptions {
+    unitTests.returnDefaultValues = true
+  }
+}
+
+dependencies {
+
+  implementation "androidx.annotation:annotation:1.0.0"
+//
+//  testImplementation deps.junit
+//  testImplementation deps.truth
+//  testImplementation deps.robolectric
+//  testImplementation deps.mockito
+//  testImplementation deps.json
+//  testImplementation deps.kotlin
+}
+
+//apply from: rootProject.file('gradle/maven_push.gradle')

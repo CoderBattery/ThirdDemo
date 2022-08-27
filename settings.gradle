@@ -1,2 +1,4 @@
 rootProject.name = "ThirdDemo"
 include ':app'
+include ':logdemo'
+include ':logger'
